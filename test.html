@@ -17,14 +17,21 @@
 <body>
 
     <div class="test-container">
-        <!-- PASTE YOUR WIDGET CODE BELOW THIS LINE -->
-        
-        <h1>My Widget Test</h1>
-        <p>Your widget should appear below:</p>
-
-        <!-- YOUR CODE STARTS HERE -->
-
-        <!-- YOUR CODE ENDS HERE -->
+<script src="//localhost:8000/static/chat-widget.min.js" defer></script>
+<script>
+  // NOTE: Do NOT use defer + DOMContentLoaded together on the init script.
+  // With defer, the DOM is already ready when the script runs, so
+  // DOMContentLoaded has already fired and the listener would never execute.
+  // Instead we wait for the widget script to finish loading via onload.
+  document.querySelector('script[src*="chat-widget"]').addEventListener('load', function () {
+    ChatWidget.init({
+      widgetToken:    'nu67wEUtzxP8LO1Dg1OjyuziAcxilcQfigBwdaSp6oE',
+      apiUrl:         '//localhost:8000',
+      botName:        'Support Assistant',
+      welcomeMessage: 'Hi! How can I help you today?'
+    });
+  });
+</script>
     </div>
 
 </body>
