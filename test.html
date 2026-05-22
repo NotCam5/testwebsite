@@ -17,7 +17,7 @@
 <body>
 
     <div class="test-container">
-<script src="//localhost:8000/static/chat-widget.min.js" defer></script>
+<script src="http://localhost:8000/static/chat-widget.min.js" defer></script>
 <script>
   // NOTE: Do NOT use defer + DOMContentLoaded together on the init script.
   // With defer, the DOM is already ready when the script runs, so
@@ -25,8 +25,8 @@
   // Instead we wait for the widget script to finish loading via onload.
   document.querySelector('script[src*="chat-widget"]').addEventListener('load', function () {
     ChatWidget.init({
-      widgetToken:    'nu67wEUtzxP8LO1Dg1OjyuziAcxilcQfigBwdaSp6oE',
-      apiUrl:         '//localhost:8000',
+      widgetToken:    'GTxbCpMvASpk0Vm0irgwp8eSI4RkDMuq58TcHKI-1Mw',
+      apiUrl:         'http://localhost:8000',
       botName:        'Support Assistant',
       welcomeMessage: 'Hi! How can I help you today?'
     });
